@@ -244,56 +244,6 @@ export default function Academy() {
           </div>
         </div>
 
-        {/* Gallery Section */}
-        <div className="mb-24">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-3xl font-serif mb-4">Student Training <span className="text-gradient italic">Gallery</span></h3>
-            <p className="text-gray-400 font-light">Real hands-on experience in our premium salon environment.</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80", alt: "Makeup students practicing on models" },
-              { src: "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=800&q=80", alt: "Bridal makeup transformation" },
-              { src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80", alt: "Hairstyling training" },
-              { src: "https://images.unsplash.com/photo-1521590832167-7bfc17454f5e?auto=format&fit=crop&w=800&q=80", alt: "Salon classroom environment" }
-            ].map((img, i) => (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
-                className="relative aspect-square rounded-2xl overflow-hidden group border border-dark-border"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/90 via-dark-bg/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out flex items-end p-6">
-                  <motion.p 
-                    initial={{ opacity: 0, y: 10 }}
-                    whileHover={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-sm font-medium text-white"
-                  >
-                    {img.alt}
-                  </motion.p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         {/* Career Opportunities & Limited Seats */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Career Opportunities */}

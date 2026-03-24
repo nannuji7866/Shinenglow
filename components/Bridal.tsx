@@ -160,52 +160,9 @@ export default function Bridal() {
         </div>
       </section>
 
-      {/* Bridal Gallery */}
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-serif mb-6">
-              Bridal <span className="text-gradient italic">Gallery</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              "https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1546804784-896d1eb2ba00?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&w=800&q=80"
-            ].map((src, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: (i % 4) * 0.1, ease: "easeOut" }}
-                className="relative aspect-[3/4] rounded-xl overflow-hidden border border-dark-border group"
-              >
-                <Image
-                  src={src}
-                  alt={`Bridal Look ${i + 1}`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-            ))}
-          </div>
-          
-          <div className="mt-16 text-center">
+          <div className="text-center">
             <Link
               href="/contact"
               className="btn-gold inline-block px-10 py-5 rounded-full uppercase tracking-widest text-sm font-bold hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-500"

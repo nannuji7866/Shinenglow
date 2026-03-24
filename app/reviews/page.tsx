@@ -66,7 +66,7 @@ export default function ReviewsPage() {
       <section className="relative py-32 overflow-hidden border-b border-dark-border">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://images.unsplash.com/photo-1521590832167-7bfc17454f5e?auto=format&fit=crop&w=1920&q=80"
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80"
             alt="Reviews Background"
             fill
             className="object-cover"

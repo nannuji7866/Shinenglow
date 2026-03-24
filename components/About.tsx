@@ -180,51 +180,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Interior Gallery */}
-      <section className="py-24 bg-dark-surface border-t border-dark-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-serif mb-6">
-              Our <span className="text-gradient italic">Sanctuary</span>
-            </h2>
-            <p className="text-gray-400 font-light max-w-2xl mx-auto">
-              Step into a world of luxury and relaxation. Our salon interior is designed to provide the ultimate comfort while you receive premium treatments.
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1521590832167-7bfc17454f5e?auto=format&fit=crop&w=800&q=80",
-              "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80"
-            ].map((src, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
-                className="relative aspect-square rounded-2xl overflow-hidden border border-dark-border group"
-              >
-                <Image
-                  src={src}
-                  alt={`Salon Interior ${i + 1}`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-1000"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-dark-bg/20 group-hover:bg-transparent transition-colors duration-500" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

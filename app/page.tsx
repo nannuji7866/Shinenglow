@@ -5,6 +5,7 @@ import AboutPreview from '@/components/AboutPreview';
 import AcademyPreview from '@/components/AcademyPreview';
 import Reviews from '@/components/Reviews';
 import Locations from '@/components/Locations';
+import InstagramFeed from '@/components/InstagramFeed';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <AcademyPreview />
       <Reviews />
       <Locations />
+      <InstagramFeed />
       <Footer />
     </main>
   );

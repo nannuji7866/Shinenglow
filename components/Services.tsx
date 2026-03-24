@@ -33,7 +33,7 @@ const servicesList = [
     title: 'Party Makeup',
     description: 'Elegant and long-lasting makeup for events and parties.',
     price: 'Starts at ₹2500',
-    image: 'https://images.unsplash.com/photo-1512496015851-a1c8f4819844?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80',
   },
   {
     title: 'Skin Treatments',
