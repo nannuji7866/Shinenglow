@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,12 +52,9 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <div className={`flex flex-col transition-transform duration-700 ease-in-out origin-left ${isScrolled ? 'scale-90' : 'scale-100'}`}>
-              <Link href="/">
-                <span className="font-serif text-2xl md:text-3xl tracking-widest text-gradient font-semibold block">SNG</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-1 block">Shine n Glow</span>
-              </Link>
-            </div>
+            <Link href="/" className="transition-transform duration-700 ease-in-out">
+              <Logo isScrolled={isScrolled} />
+            </Link>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -10,10 +11,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           <div className="lg:col-span-1">
-            <div className="flex flex-col mb-6">
-              <span className="font-serif text-3xl tracking-widest text-gradient font-semibold">SNG</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-1">Shine n Glow</span>
-            </div>
+            <Link href="/" className="inline-block mb-6">
+              <Logo />
+            </Link>
             <p className="text-sm text-gray-500 leading-relaxed font-light mb-6">
               Premium Unisex Salon in Chamba. Enhancing beauty, delivering excellence.
             </p>
